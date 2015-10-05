@@ -54,7 +54,8 @@ $('.clock1').css('margin-top', '15px')
 
   // Clock Color
 
-    // Stole some cycle code
+    // Stole some cycle code - I DON'T GET HOW THIS WORKS.  TEACH ME, SENPAI.
+
       // $.fn.spectrum=function(arrayOfColors){
       //   return this.each(function(){
       //     var self=$(this);
@@ -75,8 +76,3 @@ $('.clock1').css('margin-top', '15px')
       // $(function(){
       //   $('.clock2').spectrum(hues);
       // })
-
-    setInterval(function() {
-      $('.clock2').animate( { backgroundColor: 'red' }, 300)
-      .animate( { backgroundColor: 'green' }, 300); 
-    }, 1000);
