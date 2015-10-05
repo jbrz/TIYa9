@@ -1,5 +1,25 @@
+// Clocks Styling
+
+$('.clock').css({
+    'background-color':'black', 
+    'background-width':'600px', 
+    'background-height':'400px', 
+    'color':'white', 
+    'font-family':'Lobster, cursive', 
+    'font-size':'64px', 
+    'margin-right':'auto',  
+    'margin-bottom':'15px', 
+    'margin-left':'auto', 
+    'padding-top':'175px', 
+    'padding-bottom':'175px', 
+    'text-align':'center', 
+    'width':'600px', 
+    });
+
+
 // Clock 1
 
+  // Clock Function
     function GetClock(){
       var d=new Date();
       var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
@@ -22,10 +42,40 @@
     function GetClock2(){
       var d2=new Date();
       var nhour2=d2.getHours(),nmin2=d2.getMinutes(),nsec2=d2.getSeconds();
-      if(nmin2<=9) nmin2="0"+nmin2
+      if(nmin2<=9) nmin2="0"+nmin2;
       if(nsec2<=9) nsec2="0"+nsec2;
+      var bgcolor = '#'+nhour2+nmin2+nsec2;
+      $(".clock2").css("background-color", bgcolor );
 
     document.getElementById('clocktwo').innerHTML="#"+nhour2+nmin2+nsec2+"";
     }
 
-$('.clock').css({'background-color':'black', 'background-width':'500px', 'background-height':'350px', 'color':'white', 'width':'500px', 'margin-bottom':'25px', 'padding-top':'150px', 'padding-bottom':'150px', 'text-align':'center', 'font-size':'72px', 'font-family':'Cambria, script', 'font-weight':'bold'});
+
+  // Clock Color
+
+    // Stole some cycle code
+      // $.fn.spectrum=function(arrayOfColors){
+      //   return this.each(function(){
+      //     var self=$(this);
+      //     (function spectrum(){
+      //       var hue=arrayOfColors.shift()
+      //       arrayOfColors.push(hue)
+      //       self.animate({ backgroundColor: hue }, 1000,spectrum)
+      //     })();
+      //   })
+      // }
+      // function randomHues(n){
+      //   var res=[]
+      //   for(var i=0;i<n;i++)
+      //   res.push('rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')')
+      //   return res
+      // }
+      // var hues=randomHues(60)
+      // $(function(){
+      //   $('.clock2').spectrum(hues);
+      // })
+
+    setInterval(function() {
+      $('.clock2').animate( { backgroundColor: 'red' }, 300)
+      .animate( { backgroundColor: 'green' }, 300); 
+    }, 1000);
