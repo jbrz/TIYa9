@@ -2,20 +2,21 @@
 
 $('.clock').css({
     'background-color':'black', 
-    'background-width':'600px', 
+    'background-width':'475px', 
     'background-height':'400px', 
+    'border-radius':'15px', 
     'color':'white', 
     'font-family':'Lobster, cursive', 
     'font-size':'64px', 
     'margin-right':'auto',  
     'margin-bottom':'15px', 
     'margin-left':'auto', 
-    'padding-top':'175px', 
-    'padding-bottom':'175px', 
+    'padding-top':'150px', 
+    'padding-bottom':'150px', 
     'text-align':'center', 
-    'width':'600px', 
+    'width':'475px', 
     });
-
+$('.clock1').css('margin-top', '15px')
 
 // Clock 1
 
